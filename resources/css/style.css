@@ -34,6 +34,15 @@ header i {
 header input {
   margin-right: 0.5rem;
   border: transparent;
+  color: rgb(74, 74, 74);
+}
+
+header input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: rgb(191, 191, 191);
 }
 
 header i {
@@ -41,4 +50,14 @@ header i {
   color: rgb(35, 2, 63);
   padding: 0.25rem;
   text-align: center;
+}
+
+header i:hover {
+  background-color: rgb(255, 102, 204);
+}
+
+.tracks-header {
+  background-color: rgb(104, 0, 255);
+  color: rgb(255, 255, 255);
+  padding: 0.75rem 0;
 }
