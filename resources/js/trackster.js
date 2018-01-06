@@ -1,8 +1,15 @@
 var Trackster = {};
 
+$(document).ready(function () {
+  $('#search-button').on('click', function () {
+    var searchText = $('#search-input').val();
+    Trackster.searchTracksByTitle(searchText);
+  });
+});
+
 /*
   Given an array of track data, create the HTML for a Bootstrap row for each.
-  Append each "row" to the container in the body to display all tracks. 
+  Append each "row" to the container in the body to display all tracks.
 */
 Trackster.renderTracks = function(tracks) {
 
