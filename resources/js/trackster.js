@@ -2,9 +2,17 @@ var Trackster = {};
 const API_KEY = 'aa0ed3e2abeef58b4cb8426031c9e6cb';
 
 $(document).ready(function () {
+  var $searchInput = $('#search-input');
+
   $('#search-button').click(function () {
-    Trackster.searchTracksByTitle($('#search-input').val());
+    Trackster.searchTracksByTitle($searchInput.val());
   });
+
+  $('#search-input').keypress(function (event) {
+    if (event.keyCode === 13) {
+      Trackster.searchTracksByTitle($searchInput.val());
+    }
+  })
 });
 
 /*
