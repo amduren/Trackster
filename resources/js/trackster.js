@@ -19,6 +19,7 @@ Trackster.renderTracks = function(tracks) {
   for (var trackIndex = 0; trackIndex < tracks.length; trackIndex++) {
     var track = tracks[trackIndex];
     var mediumAlbumArt = track.image[1]['#text'];
+    var formattedListeners = numeral(track.listeners).format('0,0');
     var trackRow =
       '<div class="row track">' +
       '  <div class="col-xs-1 col-xs-offset-1">' +
@@ -29,7 +30,7 @@ Trackster.renderTracks = function(tracks) {
       '  <div class="col-xs-4">' + track.name + '</div>' +
       '  <div class="col-xs-2">' + track.artist + '</div>' +
       '  <div class="col-xs-2"><img src="' + mediumAlbumArt + '"/></div>' +
-      '  <div class="col-xs-2 listeners">' + track.listeners + '</div>' +
+      '  <div class="col-xs-2 listeners">' + formattedListeners + '</div>' +
       '</div>';
 
       $trackList.append(trackRow);
