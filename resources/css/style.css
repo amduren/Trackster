@@ -61,3 +61,22 @@ header i:hover {
   color: rgb(255, 255, 255);
   padding: 0.75rem 0;
 }
+
+.track {
+  display: flex;
+  padding: 0.5rem 0;
+  border-bottom: 0.0625rem solid rgb(204, 204, 204);
+}
+
+.track:hover {
+  background-color: rgb(239, 237, 242);
+}
+
+.track div {
+  display: flex;
+  align-items: center;
+}
+
+.track a {
+  color: rgb(255, 0, 171);
+}
